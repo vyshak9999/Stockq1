@@ -60,6 +60,7 @@ portion_size=float(portfolio_size)/len(final_dataframe.index)
 final_dataframe['Number Of Shares to Buy']=portion_size/final_dataframe['Price']
 
 final_dataframe['Number Of Shares to Buy']=final_dataframe['Number Of Shares to Buy'].apply(np.floor)
+final_dataframe=final_dataframe[:50]
 
 final_dataframe.index = [""] * len(final_dataframe)
 
@@ -67,6 +68,7 @@ st.table(final_dataframe)
 
 #final_dataframe.to_excel('FinalOutput.xlsx',index=False)
 
+st.bar_chart[]
 
 
 
