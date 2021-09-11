@@ -68,7 +68,7 @@ st.table(final_dataframe)
 
 #final_dataframe.to_excel('FinalOutput.xlsx',index=False)
 
-st.bar_chart[]
+st.bar_chart(final_dataframe)
 
 
 
