@@ -7,7 +7,7 @@ import streamlit as st
 
 st.title('S&P500 List for Equal Portion')
 
-symbolCsv=pd.read_csv('C:\Python\Project\Stcks\symbols.csv')
+symbolCsv=pd.read_csv('symbols.csv')
 
 
 symbol=symbolCsv['Symbol']
