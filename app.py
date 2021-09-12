@@ -7,7 +7,7 @@ import streamlit as st
 
 st.title('S&P500 List for Equal Portion')
 
-symbolCsv=pd.read_csv('symbols.csv')
+symbolCsv=pd.read_csv('C:\Python\Project\Stcks\symbols.csv')
 
 
 symbol=symbolCsv['Symbol']
@@ -64,8 +64,7 @@ final_dataframe['Number Of Shares to Buy']=final_dataframe['Number Of Shares to 
 
 final_dataframe.index = [""] * len(final_dataframe)
 
+csv=final_dataframe.to_csv().encode('utf-8')
+
+st.download_button(data=csv,label='Press to Download', file_name='Output.csv', mime='text/csv')
 st.table(final_dataframe)
-
-
-
-
