@@ -5,9 +5,11 @@ from secrets import token
 import numpy as np
 import streamlit as st 
 
+st.set_page_config(page_title='Stocks') 
+
 st.title('S&P500 List for Equal Portion')
 
-symbolCsv=pd.read_csv('C:\Python\Project\Stcks\symbols.csv')
+symbolCsv=pd.read_csv('symbols.csv')
 
 
 symbol=symbolCsv['Symbol']
@@ -66,5 +68,5 @@ final_dataframe.index = [""] * len(final_dataframe)
 
 csv=final_dataframe.to_csv().encode('utf-8')
 
-st.download_button(data=csv,label='Press to Download', file_name='Output.csv', mime='text/csv')
+st.download_button(data=csv,label='Download Output as .csv', file_name='Output.csv', mime='text/csv')
 st.table(final_dataframe)
